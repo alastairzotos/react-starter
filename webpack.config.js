@@ -32,14 +32,15 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: 'public/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            inject: 'body'
         })
     ],
 
     output: {
-        filename: 'app.js',
+        filename: './app.js',
         pathinfo: false,
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        // publicPath: '/'
     }
 };
